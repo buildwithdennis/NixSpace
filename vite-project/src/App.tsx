@@ -1,15 +1,12 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+
+// === src/App.jsx ===
 import './App.css'
+import OnboardingPage from './Pages/OnboardingPage';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-   
+      <OnboardingPage />
     </>
   )
 }

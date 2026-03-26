@@ -1,1 +1,14 @@
+@font-face {
+  font-family: Satoshi-Regular;
+  src: url('../src/assets/fonts/Satoshi-Regular.otf');
+}
+@font-face {
+  font-family: Satoshi-Bold;
+  src: url('../src/assets/fonts/Satoshi-Bold.otf');
+}
 @import "tailwindcss";
+
+@theme{
+  --font-satoshi: Satoshi-Regular, sans-serif;
+  --font-stoshi-bold: Satoshi-Bold, sans-serif;
+}
