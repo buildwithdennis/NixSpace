@@ -4,7 +4,7 @@ import RightPanel from "../components/LoginOnboarding/RightPanel"
 import { useNavigate } from "react-router-dom";
 
 const OnboardingImagePage = () => {
-        const [companyName, setCompanyName] = useState("");
+    const [companyName, setCompanyName] = useState("");
     const [focused, setFocused] = useState(false);
     const navigate = useNavigate();
 
@@ -29,11 +29,12 @@ const OnboardingImagePage = () => {
             setCompanyName={setCompanyName}
             focused={focused}
             setFocused={setFocused}
-            buttonOnClick={()=> navigate("/onboarding")}
+            buttonOnClick={()=> navigate("/Onboarding-name")}
             disabled={false}
             inputTitle="Your Company or team logo"
             variant="logo"
             showSkip={true}
+            inputplaceholder="eg. Jacob Construction"
         />
          
 

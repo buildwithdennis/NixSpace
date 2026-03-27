@@ -18,12 +18,13 @@ type LeftPanelProps= {
     inputTitle: string;
     variant?: "input" | "logo"; 
     showSkip?: boolean;
+    inputplaceholder?: string;
 }
 
 const Leftpanel = ({title, description, 
     companyName, setCompanyName = () => {}, 
     focused, setFocused, buttonOnClick,
-     disabled, inputTitle, variant, showSkip = false }:LeftPanelProps) => {
+     disabled, inputTitle, variant, showSkip = false, inputplaceholder }:LeftPanelProps) => {
      
   return (
        <div className="bg-white w-full md:w-1/2 flex flex-col justify-between p-8 md:p-10 sm:rounded-2xl">
@@ -52,6 +53,7 @@ const Leftpanel = ({title, description,
       setCompanyName={setCompanyName}
       focused={focused}
       setFocused={setFocused}
+      inputplaceholder={inputplaceholder}
     />
   )}
 

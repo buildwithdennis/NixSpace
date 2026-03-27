@@ -4,9 +4,10 @@ type InputProps = {
     setCompanyName: (name: string) => void;
     focused: boolean;
     setFocused: (focused: boolean) => void;
+    inputplaceholder?: string;
 }
 
-const InputField = ({ companyName, setCompanyName, focused, setFocused }: InputProps) => {
+const InputField = ({ companyName, setCompanyName, focused, setFocused, inputplaceholder }: InputProps) => {
   return (
       <input
                 type="text"
@@ -14,7 +15,7 @@ const InputField = ({ companyName, setCompanyName, focused, setFocused }: InputP
                 onChange={(e) => setCompanyName(e.target.value)}
                 onFocus={() => setFocused(true)}
                 onBlur={() => setFocused(false)}
-                placeholder="eg. Jacob Construction"
+                placeholder={inputplaceholder}
                 className={`w-full px-4 py-3 rounded-lg border-2 text-lg text-gray-700 font-satoshi font-bold placeholder-gray-300 outline-none transition-all duration-200 ${
                   focused
                     ? "border-purple-500 shadow-md shadow-purple-100"
