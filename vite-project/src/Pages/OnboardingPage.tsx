@@ -39,7 +39,7 @@ const OnboardingPage = () => {
             buttonOnClick={()=> navigate("/onboarding")}
             disabled={!companyName.trim()}
             inputTitle="Company / Team Name"
-        
+            variant="input"
         />
          
 

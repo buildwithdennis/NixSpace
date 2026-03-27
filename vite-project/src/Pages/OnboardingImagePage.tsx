@@ -33,12 +33,14 @@ const OnboardingImagePage = () => {
             disabled={!companyName.trim()}
             inputTitle="Your Company or team logo"
             variant="logo"
+            showSkip={true}
         />
          
 
         {/* Right Panel */}
         <RightPanel />
 
+        
       </div>
     </div>
   )

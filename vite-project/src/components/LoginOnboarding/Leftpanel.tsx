@@ -17,12 +17,13 @@ type LeftPanelProps= {
     disabled: boolean;
     inputTitle: string;
     variant?: "input" | "logo"; 
+    showSkip?: boolean;
 }
 
 const Leftpanel = ({title, description, 
     companyName, setCompanyName = () => {}, 
     focused, setFocused, buttonOnClick,
-     disabled, inputTitle, variant }:LeftPanelProps) => {
+     disabled, inputTitle, variant, showSkip = false }:LeftPanelProps) => {
      
   return (
        <div className="bg-white w-full md:w-1/2 flex flex-col justify-between p-8 md:p-10 sm:rounded-2xl">
@@ -70,6 +71,11 @@ const Leftpanel = ({title, description,
           </div>
 
           {/* Spacer */}
+          {showSkip && (
+            <button onClick={buttonOnClick} className="text-lg hover:cursor-pointer text-[#5C5C5C] self-center">
+                Skip this step
+            </button>
+          )}
           <div />
         </div>
   )
