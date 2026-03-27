@@ -1,20 +1,15 @@
-// === src/Pages/OnboardingPage.jsx ===
-
-
-import RightPanel from "../components/LoginOnboarding/RightPanel";
-import Leftpanel from "../components/LoginOnboarding/Leftpanel";
 import { useState } from "react";
+import Leftpanel from "../components/LoginOnboarding/Leftpanel"
+import RightPanel from "../components/LoginOnboarding/RightPanel"
 import { useNavigate } from "react-router-dom";
 
-
-const OnboardingPage = () => {
-    const [companyName, setCompanyName] = useState("");
+const OnboardingImagePage = () => {
+        const [companyName, setCompanyName] = useState("");
     const [focused, setFocused] = useState(false);
     const navigate = useNavigate();
 
   return (
     
-
     <div className="min-h-screen flex items-center justify-center bg-gray-100 ">
   
   <div className="
@@ -28,18 +23,16 @@ const OnboardingPage = () => {
 
         {/* Left Panel */}
         <Leftpanel 
-            title="What is the name of your team or
-                    company?"
-            description=" The name you choose should be recognizable by your team. This
-                        would be your workspace."
+            title="Upload company or team logo"
+            description="Add your company logo so you have a personalized feel on Nixspace."
             companyName={companyName}
             setCompanyName={setCompanyName}
             focused={focused}
             setFocused={setFocused}
             buttonOnClick={()=> navigate("/onboarding")}
             disabled={!companyName.trim()}
-            inputTitle="Company / Team Name"
-        
+            inputTitle="Your Company or team logo"
+            variant="logo"
         />
          
 
@@ -48,7 +41,7 @@ const OnboardingPage = () => {
 
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default OnboardingPage;
+export default OnboardingImagePage
