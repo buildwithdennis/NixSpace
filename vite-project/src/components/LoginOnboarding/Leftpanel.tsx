@@ -2,7 +2,13 @@ import { useState } from "react";
 import Logo from "../../assets/Images/Logo.png";
 import ButtonComponent from "../ButtonComponent";
 
-const Leftpanel = () => {
+
+type LeftPanelProps= {
+    title: string,
+    description: string,
+}
+
+const Leftpanel = ({title, description}:LeftPanelProps) => {
      const [companyName, setCompanyName] = useState("");
       const [focused, setFocused] = useState(false);
   return (
@@ -14,14 +20,11 @@ const Leftpanel = () => {
           {/* Main Content */}
           <div className="flex flex-col gap-6 mt-10">
             <h1 className="text-2xl md:text-4xl font-satoshi-bold font-extrabold text-gray-900 leading-tight tracking-tight">
-              What is the name of your team or
-        
-              company?
+              {title }
             </h1>
 
             <p className="text-xl font-satoshi text-gray-500 leading-relaxed">
-              The name you choose should be recognizable by your team. This
-              would be your workspace.
+              {description}
             </p>
 
             {/* Input */}

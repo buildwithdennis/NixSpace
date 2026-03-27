@@ -24,8 +24,12 @@ const OnboardingPage = () => {
         {/* <div className="w-full h-screen flex flex-col md:flex-row"> */}
 
         {/* Left Panel */}
-        <Leftpanel />
-     
+        <Leftpanel title="What is the name of your team or
+              company?"
+            description=" The name you choose should be recognizable by your team. This
+              would be your workspace."
+               />
+         
 
         {/* Right Panel */}
         <RightPanel />
