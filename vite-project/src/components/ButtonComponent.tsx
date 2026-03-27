@@ -8,11 +8,11 @@ const ButtonComponent = ({ onClick, disabled }: buttonProps) => {
   <button 
   onClick={onClick}
   disabled={disabled}
-  className={`w-full py-3 rounded-xl bg-purple-600 hover:bg-purple-700
+  className={`w-full py-3 rounded-xl
    active:scale-95 text-white font-semibold text-lg tracking-wide
-    transition-all duration-150 shadow-lg shadow-purple-200
+    transition-all duration-150 shadow-lg
      flex items-center justify-center gap-2 ${
-      disabled ? "cursor-not-allowed opacity-50" : ""
+      disabled ? "cursor-not-allowed bg-[#B9B9B9] opacity-50" : " bg-purple-600 hover:bg-purple-700  shadow-purple-200"
      } `}>
   Continue
   <HiArrowRight />

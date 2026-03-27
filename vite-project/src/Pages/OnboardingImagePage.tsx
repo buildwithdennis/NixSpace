@@ -30,7 +30,7 @@ const OnboardingImagePage = () => {
             focused={focused}
             setFocused={setFocused}
             buttonOnClick={()=> navigate("/onboarding")}
-            disabled={!companyName.trim()}
+            disabled={false}
             inputTitle="Your Company or team logo"
             variant="logo"
             showSkip={true}
